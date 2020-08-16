@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Computer Architecture | Diploma In Computer Engineering</title>
+
+  <link rel="Shortcut icon" type="image/png" href="https://dslv9ilpbe7p1.cloudfront.net/W3_nDU_sLjE0rj2ermPGFA_store_logo_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../Style.css" />
+  <link rel="stylesheet" href="../mobile-style.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="https://sujanpdl.com.np">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>SUJANPDL.com.np</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto" id="home"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../dcom-notes.html">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          
+            <a href="https://bit.ly/30WdHH7" ><button class="btn btn-light px-5 py-2 primary-btn" style="margin-top: 10px; ">
+            <i class="fa fa-download"></i>Download !pdf
+          </button></a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+<div class="cp cp--expand-sm " style="margin-left: 20px; margin-right: 20px;">
+  <h1 class="text-center" style=" margin-top: 150px; font-weight: bold; "> Computer Architecture </h1>
+  <br/><br/><br/>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Link Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9291744844799241"
+     data-ad-slot="9048120476"
+     data-ad-format="link"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 class="text-center" style="font-weight: bold;">[Unit-1:Introduction]</h2>
+<h5 style="font-weight: bold">1.) Expanded Structure of IAS computer</h5>
+<img src="https://www.sujanpdl.com.np/images/ca.png" ><p style="font-size: 10px;"> Fig: Expanded structure of IAS computer Memory buffer register </p>
+<p style="font-weight: bold">(MBR):-</p>
+Contains a word to be stored in memory or sent to the I/O unit, or is used to receive a word from memory or from the I/O unit.<br/><br/>
+<p style="font-weight: bold">Memory address register (MAR) :-</p>
+Specifies the address of memory in the word to be written from or read into the MBR.<br/><br/>
+<p style="font-weight: bold">Instruction register (IR) :-</p>
+Contains the 8 bits Opcode instruction being executed. <br/><br/>
+<p style="font-weight: bold">Instruction buffer register (IBR):-</p>
+Employed to hold temporarily the right- hand instruction from a word in memory.<br/>.<br/>
+<p style="font-weight: bold">Program counter (PC):-</p>
+
+Contains the address of the next instruction-pair to be fetched from memory.<br/><br/>
+<p style="font-weight: bold">Accumulator (AC) and multiplier quotient (MQ):-</p>
+
+Employed to hold temporarily operands and results of ALU operations. For example, the result of multiplying two 40-bit numbers is an 80-bit number; the most significant 40 bits are stored in the AC and the least significant in the MQ.<br/><br/>
+<p style="font-weight: bold">Central processing unit (CPU):-</p>
+
+Controls the operation of the computer and performs its data processing functions; often simply referred to as processor.<br/><br/>
+<p style="font-weight: bold">I/O:-</p>
+
+Moves data between the computer and its external environment.<br/><br/>
+
+
+
+<h5 style="font-weight: bold">2.) Flow chart of IAS Computer:-</h5>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdCnRf90vxr7DizRevecAa4jwWmYwYJqbPQltJ-ywKglY5ZGBJ"><p>
+The IAs operates by respectively performing as instruction cycle. Each instruction cycle consists of two sub-cycles.<br/><br/>
+<p style="font-weight: bold"> Fetch Cycle:-</p>
+
+The opcode of next instruction is loaded into the IR and the address portion is loaded into the MAR. This instruction may be taken from the IBR, or it can be obtained from memory by loading a word into the MBR, and then down to the IBR, IR and MAR.<br/><br/>
+<p style="font-weight: bold">Execute Cycle</p>
+The control circuitry interprets the Opcode & executes the instruction by sending out the appropriate control signals to cause data to be moved or an operation to be performed by the ALU.<br/><br/>
+<h5 style="font-weight: bold">3.)IAS instruction format:-</h5>
+
+The memory of IAS consists of 1000 storage locations called words of 40 binary digits each. Both data & instructin are stored there, Number are represented in binary form.<br/><br/>
+<img src="images/ias.png">
+ <p>
+Fig. IAS Format</p><br/>
+
+
+
+Each number is represented by a sign bit and a 39 bit value. A word may also contain 20 bit instruction consisting of an 8 bit operation code(opcode) specifying the operation to be performed and 12 bit address designing one of the words in memory (numbered from 0 to 999)<br/><br/>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9291744844799241"
+     data-ad-slot="9129077187"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+IAS computer had a total of 21 instruction that can be grouped as follows.<br/>
+
+<p style="font-weight: bold">Data transfer:-</p>
+
+Move data between memory and ALU register or between two ALU registers.<br/><br/>
+<p style="font-weight: bold">Unconditional branch:-</p>
+
+The control unit executes instruction in sequence from memory. There sequence can be changed by a branch instruction which facilitates repetitive operations.<br/><br/>
+
+<p style="font-weight: bold">Conditional branch:-</p>
+
+Branch can be made dependent on a condition thus allowing decision part.<br/><br/>
+
+<p style="font-weight: bold">Arithmetic:-</p>
+
+It comprises operation performed by ALU<br/><br/>
+
+<p style="font-weight: bold">Address modify:-</p>
+
+It permits address to be computed in ALU and then inserted into instruction stored in memory.
+<br/><br/>
+
+
+
+<h5 style="font-weight: bold">4.) The difference between computer Organization and Computer Architecture:-</h5>
+
+
+
+<p style="font-weight: bold">Computer organization</p>
+
+- Deals with all physical components of computer systems that interacts with each other to perform various functionalities.<br/>
+- The lower level of computer organization is known as micro- architecture which is more detailed and concrete.<br/>
+- Examples of Organizational attributes includes Hardware details transparent to the programmer such as control signal and peripheral.<br/><br/><p style="font-weight: bold">
+Computer architecture</p>
+
+- Refers as a set of attributes of a system as seen by programmer<br/>
+- Examples of the Architectural attributes include the instruction set, the no of bits used to represent the data types, Input Output mechanism and technique for addressing memories.<br/><br/>
+The difference between architecture and organization is best described by a non-computer example. Is the gear level in a motorcycle part of it is architecture or organization? The architecture of a motorcycle is simple; it transports you from A to B. The gear level belongs to the motorcycle's organization because it implements the function of a motorcycle but is not part of that function<br/><br/>
+<h5 style="font-weight: bold">5.)Scale Of Integration:-</h5>
+
+The number of components fitted into a standard size IC represents its integration scale, in other words it’s a density of components. It is classified as follows:<br/>
+
+
+ SSI – Small Scale Integration<br/>
+
+It have less than 100 components (about 10 gates).<br/><br/>
+
+MSI – Medium Scale Integration<br/>
+
+It contains less than 500 components or have more than 10 but less than 100 gates.<br/><br/>
+
+
+
+ LSI – Large Scale Integration<br/>
+
+Here number of components is between 500 and 300000 or have more than 100 gates.
+<br/><br/>
+ VLSI – Very Large Scale Integration<br/>
+
+It contains more than 300000 components per chip<br/><br/>
+
+VVLSI - Very Very Large Scale Integration<br/>
+
+It contains more than 1500000 components per chip.<br/>
+
+
+<br/><br/><br/>
+  <div class=" text-center text-warning">
+<h5  style="font-weight:bold;">Download the pdf to get all the unit wise notes.<br/>Try to save your valueable time!</h5><br/><br/></div>
+</div>
+</main>
+  <footer style="border-top: 3px solid #DC3545;">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We makes launching and managing our own business easy. It is home to experts who provide clear, practical notes and question papers. <a href="../about-us.html" class="text-white">Read More</a></p>
+          <p class="pt-4 text-muted">Copyright ©2018-Present All rights reserved | This template is made by
+            <a href="../personal/sujan.html" target="_blank" style="color: red;">Sujan Paudel</a>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+           <a href="#" ><i class="fab fa-facebook-f" ></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</body>
+
+</html>
