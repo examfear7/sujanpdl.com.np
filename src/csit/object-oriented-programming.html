@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Object Oriented Programming | BSc. CSIT Notes</title>
+
+  <link rel="Shortcut icon" type="image/png" href="https://dslv9ilpbe7p1.cloudfront.net/W3_nDU_sLjE0rj2ermPGFA_store_logo_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../Style.css" />
+  <link rel="stylesheet" href="../mobile-style.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="https://sujanpdl.com.np">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>SUJANPDL.com.np</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto" id="home"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../bsc.html">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          
+            <a href="https://drive.google.com/file/d/13iR7tO_TC9DyIJSOWUBM_v5o69sMPPMy/view?usp=sharing" ><button class="btn btn-light px-5 py-2 primary-btn" style="margin-top: 10px; ">
+            <i class="fa fa-download"></i>Download !pdf
+          </button></a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+<div class="cp cp--expand-sm " style="margin-left: 20px; margin-right: 20px;">
+  <h1 class="text-center" style=" margin-top: 50px; font-weight: bold; " id="unit-1">Object Oriented Programming </h1>
+  <br/><br/><br/>
+                 
+                <h3>  Basic Introduction</h3>
+The term Object Oriented programming is frequently heard in the programming arena.
+Object oriented approach was started to overcome the limitations of the earlier
+programming approaches. It is popularly known by its acronym OOP. It is used to
+develop reliable and reusable software.<brr/>
+The programming technology is continuously developing since the start of the computer
+and related technologies. New tools and techniques are included in programming in each
+phase of their development. Such enhancements increased complexity in programming
+and design of large software. Similarly, the users' requirements change and increase after
+the software is brought into operation. The software may need maintenance and
+enhancements after the regular feedback from the users. There could be problems to
+represent real life entities of problem while analyzing and designing system. While
+improving the software work may need to begin from the scratch that may increase
+software cost too. To incorporate users' demands and enhancements in software with such
+complex systems was difficult. To overcome such problems software developers were
+forced to develop new programming method. OOP was introduced to solve such
+programming problems.<br/><br/>
+<strong>1.1 Software Evolution</strong><br/>
+The software evolution occurred in several phases. Since the beginning of the first
+computer, programming for the computer started to develop software. The earlier
+electronic computer ENIAC was programmed in machine language by using switches to
+enter 1 and 0.<br/><br/>
+<strong>1.2 Basic of Object Oriented Programming</strong><br/>
+Objects are the entities that can be uniquely identified from others. They have their
+unique identity and found everywhere. In real world system everything exists in the form
+of objects. For example desk, bench, blackboard, student, teacher, car, tree are objects.
+Every object has two things, firstly its properties we call attributes and second its
+behavior we call function. For example a car is an object. It has attributes like color,
+number of seats, chassis number, engine number etc and behavior like move, stop,
+accelerate, turn etc. The Object Oriented Programming is developed to model such real
+world system. Its sole objective is to overcome the limitation of Procedure Oriented
+approach. Before discussing various features of Object Oriented Programming, it is wise
+to discuss characteristics of Procedure Programming and its limitations.<br/><br/>
+<strong>1.2.1 Procedure Oriented Programming</strong>
+In procedure oriented programming a large program is broken down into smaller
+manageable parts called procedures or functions. In procedure oriented programming
+priority is given on function rather than data.<br/>
+In procedure oriented programming language, a program basically consists of sequence
+of instructions each of which tells the computer to do something such as reading inputs
+from the user, doing necessary calculation, displaying output. When a program becomes larger, it is then broken into smaller units called procedure or functions. A number of
+functions are supposed to be written to accomplish such tasks. The primary focus of
+procedural oriented programming is on functions rather than data. These functions do not
+let code duplication. This technique is only suitable for medium sized software
+applications.<br/>
+The procedure oriented programming can be diagrammatically represented as follows:<br/>
+ In procedure oriented programming two types of data local and global are used. Data
+within the function are called local data and the data which are not within any function
+are called global data. Global data are accessible to the only function where it is declared.
+So each function may access its local data as well as global data. The local data of one
+function is not accessible to other functions. If any data is to be accessed by two or more
+functions it should be made global. However, global data are vulnerable to another
+programmer to be changed unknowingly. Functions are action oriented and do not
+correspond to the element of the problem. The separate arrangement of data and functions
+does a poor job of modeling things in the real world. That’s why procedure oriented
+programming approach does not model real world system perfectly.<br/>
+ High Level Programming Languages like COBOL, FORTRAN, Pascal, C are
+common procedure oriented programming languages.<br/><br/>
+<strong>Characteristics of POP</strong><br/>
+The characteristics of procedure oriented programming are listed as follows:<br/>
+ A large program is broken down into small manageable procedures or functions.<br/>
+ Procedure oriented programming focuses on procedure or function rather than
+data.<br/>
+ For sharing a common data among different functions the data is made global.<br/>
+ Since global data are transferred from function to function; during the course of
+transformation the global data may be altered by the function.<br/>
+ The program design of procedure oriented programming follows top down
+methodology.<br/><br/>
+<strong>Limitation of POP</strong><br/>
+Even though procedure oriented programming approach is still used in software industry
+it has following limitations.<br/>
+ Focus on functions rather than data.<br/>
+ In large program, it is difficult to identify belonging of global data.<Br/>
+ The use of global data is error prone and it could be an obstacle in code
+maintenance and enhancements.<br/>
+ The modification of global data requires the modification of those functions using
+it.<br/>
+ Maintaining and enhancing program code is still difficult because of global data.<br/>
+ It does not model real world problem very well. Since functions are action
+oriented and do not really correspond to the elements of problem.<br/><br/>
+<strong>Object oriented programming (OOPS) </strong><br/>
+The errors faced in the procedure oriented programming approach are the motivating
+factor in the invention of objected oriented approach. In OOP, data are treated as a
+critical element in the program and restricts freely transformation of data around the
+system. Instead, data are associated with functions that operate on it and protect it from
+accidental modification outside functions. OOP approach permits decomposition of a
+problem into entities called objects and then build data and function around them. Data of
+an object are accessible only by the function belonging with the object. But function of
+one object may access the function of another object.<br/>
+Object-Oriented programming is a programming methodology that associates data
+structures with a set of operators which act upon it. In OOP, an instance of such an entity
+is known as object. In other words, OOP is a method of implementation in which
+programs are organized as co-operative collections of objects, each of which represents
+an instance of some class and whose classes are all members of a hierarchy of classes
+united through the property called inheritance.<br/><br/>
+<strong>Characteristics of OOPs</strong><br/>
+OOP is most sophisticated programming methodology among other methodologies by
+far. Some noticeable characteristics of OOP are as follows:<br/>
+ Emphasis is on data rather than procedures.<br/>
+ Programs are divided into objects.<br/>
+ Function and data are tied together in a single unit.<br/>
+ Data can be hidden to prevent from accidental alteration from other function or
+objects.<br/>
+ Data access is done through the visible functions so that communication between
+objects is possible.<br/>
+ Data structures are modeled as objects.<br/>
+ Follows Bottom up approach of program design methodology.<br/>
+
+<br />
+<br/>
+<h5  style="font-weight:bold; color:darkorange;" align="center">Download the pdf file  to get all the unit wise notes.<br/>Try to save your valueable time!<br/></h5>
+
+<br/><br/></div>
+</div>
+</main>
+  <footer style="border-top: 3px solid #DC3545;">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We makes launching and managing our own business easy. It is home to experts who provide clear, practical notes and question papers. <a href="../about-bsc.html" class="text-white">Read More</a></p>
+          <p class="pt-4 text-muted">Copyright ©2018-Present All rights reserved | This template is made by
+            <a href="../personal/sujan.html" target="_blank" style="color: red;">Sujan Paudel</a>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+           <a href="#" ><i class="fab fa-facebook-f" ></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</body>
+
+</html>

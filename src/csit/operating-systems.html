@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Operating Systems | BSc. CSIT Notes</title>
+
+  <link rel="Shortcut icon" type="image/png" href="https://dslv9ilpbe7p1.cloudfront.net/W3_nDU_sLjE0rj2ermPGFA_store_logo_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../Style.css" />
+  <link rel="stylesheet" href="../mobile-style.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="https://sujanpdl.com.np">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>SUJANPDL.com.np</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto" id="home"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../bsc.html">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          
+            <a href="https://drive.google.com/file/d/1Bh2rGBILeoBu9EzWbQ6KvWK9mgWUo6V4/view?usp=sharing" ><button class="btn btn-light px-5 py-2 primary-btn" style="margin-top: 10px; ">
+            <i class="fa fa-download"></i>Download !pdf
+          </button></a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+<div class="cp cp--expand-sm " style="margin-left: 20px; margin-right: 20px;">
+  <h1 class="text-center" style=" margin-top: 50px; font-weight: bold; " id="unit-1"> Operating Systems</h1>
+  <br/><br/><br/>
+                <h3> Introduction </h3><br/>
+The operating system is the first piece of software to run on a computer when it
+is booted. Its job is to coordinate the execution of all other software, mainly user
+applications. It also provides various common services that are needed by users and
+applications.<br/><br/>
+<strong>1.1 Operating System Functionality</strong><br/>
+The operating system controls the machine
+It is common to draw the following picture to show the place of the operating system:
+<br/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/1200px-Operating_system_placement.svg.png" height="200px" width="200px">
+
+This is a misleading picture, because applications mostly execute machine instructions that do not go through the operating system. A better picture is:<br/>
+<img src="https://www.sujanpdl.com.np/os.png" height="500px" width="500px">
+
+
+where we have used a 3-D perspective to show that there is one hardware base, one
+operating system, but many applications. It also shows the important interfaces: applications can execute only non-privileged machine instructions, and they may also
+call upon the operating system to perform some service for them. The operating system may use privileged instructions that are not available to applications. And in
+addition, various hardware devices may generate interrupts that lead to the execution of operating system code.<br/>
+A possible sequence of actions in such a system is the following:<br/>
+1. The operating system executes, and schedules an application (makes it run).<br/>
+2. The chosen application runs: the CPU executes its (non-privileged) instructions,
+and the operating system is not involved at all.<br/>
+3. The system clock interrupts the CPU, causing it to switch to the clock’s interrupt
+handler, which is an operating system function.<br/>
+4. The clock interrupt handler updates the operating system’s notion of time, and
+calls the scheduler to decide what to do next.<br/>
+5. The operating system scheduler chooses another application to run in place of
+the previous one, thus performing a context switch.<br/>
+6. The chosen application runs directly on the hardware; again, the operating system is not involved. After some time, the application performs a system call to
+read from a file.<br/>
+7. The system call causes a trap into the operating system The operating system
+sets things up for the I/O operation (using some privileged instructions). It then
+puts the calling application to sleep, to await the I/O completion, and chooses
+another application to run in its place.<br/>
+8. The third application runs.<br/><br/>
+
+The important thing to notice is that at any given time, only one program is running.
+Sometimes this is the operating system, and at other times it is a user application.
+When a user application is running, the operating system loses its control over the
+machine. It regains control if the user application performs a system call, or if there
+is a hardware interrupt.<br/><br/>
+<strong>Exercise 1 How can the operating system guarantee that there will be a system call or
+interrupt, so that it will regain control?</strong><br/><br/>
+<strong>The operating system is a reactive program</strong><br/>
+Another important thing to notice is that the operating system is a reactive program.
+It does not get an input, do some processing, and produce an output. Instead, it is
+constantly waiting for some event to happen. When the event happens, the operating
+system reacts. This usually involves some administration to handle whatever it is
+that happened. Then the operating system schedules another application, and waits
+for the next event.<br/>
+Events can be classified into two types: interrupts and system calls. These are
+described in more detail below.<br/>
+The goal of the operating system is to run as little as possible, handle the events
+quickly, and let application run most of the time.<br/>
+Exercise 2 Make a list of applications you use in everyday activities. Which of them
+are reactive? Are reactive programs common or rare?<br/><br/>
+<strong>The operating system performs resource management</strong><br/>
+One of the main features of operating systems is support for multiprogramming. This
+means that multiple programs may execute “at the same time”. But given that there
+is only one processor, this concurrent execution is actually a fiction. In reality, the
+operating system juggles the system’s resources between the competing programs,
+trying to make it look as if each one has the computer for itself.<br/>
+At the heart of multiprogramming lies resource management — deciding which
+running program will get what resources. Resource management is akin to the short
+blanket problem: everyone wants to be covered, but the blanket is too short to cover
+everyone at once.<br/>
+The resources in a computer system include the obvious pieces of hardware needed
+by programs:<br/>
+• The CPU itself.<br/>
+• Memory to store programs and their data.<br/>
+
+
+
+<br />
+<br/>
+<h5  style="font-weight:bold; color:darkorange;" align="center">Download the pdf file  to get all the unit wise notes.<br/>Try to save your valueable time!<br/></h5>
+
+<br/><br/></div>
+</div>
+</main>
+  <footer style="border-top: 3px solid #DC3545;">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We makes launching and managing our own business easy. It is home to experts who provide clear, practical notes and question papers. <a href="../about-bsc.html" class="text-white">Read More</a></p>
+          <p class="pt-4 text-muted">Copyright ©2018-Present All rights reserved | This template is made by
+            <a href="../personal/sujan.html" target="_blank" style="color: red;">Sujan Paudel</a>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+           <a href="#" ><i class="fab fa-facebook-f" ></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</body>
+
+</html>

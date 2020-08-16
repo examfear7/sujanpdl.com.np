@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Theory of Computation | BSc. CSIT Notes</title>
+
+  <link rel="Shortcut icon" type="image/png" href="https://dslv9ilpbe7p1.cloudfront.net/W3_nDU_sLjE0rj2ermPGFA_store_logo_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../Style.css" />
+  <link rel="stylesheet" href="../mobile-style.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="https://sujanpdl.com.np">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>SUJANPDL.com.np</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto" id="home"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../bsc.html">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          
+            <a href="https://drive.google.com/file/d/16nxuHAQqJANOnBv1drZh5OKPGanR_46i/view?usp=sharing" ><button class="btn btn-light px-5 py-2 primary-btn" style="margin-top: 10px; ">
+            <i class="fa fa-download"></i>Download !pdf
+          </button></a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+<div class="cp cp--expand-sm " style="margin-left: 20px; margin-right: 20px;">
+  <h1 class="text-center" style=" margin-top: 50px; font-weight: bold; " id="unit-1">Theory of Computation</h1>
+  <br/><br/><br/>
+                           
+<h3> Introduction </h3><br/>
+<strong>1.1 Purpose and motivation</strong><br/>
+This course is on the Theory of Computation, which tries to answer the
+following questions:<br/>
+• What are the mathematical properties of computer hardware and software?<br/>
+• What is a computation and what is an algorithm? Can we give rigorous
+mathematical definitions of these notions?<br/>
+• What are the limitations of computers? Can “everything” be computed? (As we will see, the answer to this question is “no”.)<br/><br/>
+<strong>Purpose of the Theory of Computation:</strong> <br/>Develop formal mathematical models of computation that reflect real-world computers.
+This field of research was started by mathematicians and logicians in the
+1930’s, when they were trying to understand the meaning of a “computation”.
+A central question asked was whether all mathematical problems can be
+solved in a systematic way. The research that started in those days led to
+computers as we know them today.<br/>
+Nowadays, the Theory of Computation can be divided into the following three areas: Complexity Theory, Computability Theory, and Automata
+Theory.<br/><br/>
+<strong>1.1.1 Complexity Theory</strong><br/>
+The main question asked in this area is “What makes some problems computationally hard and other problems easy?”
+Informally, a problem is called “easy”, if it is efficiently solvable. Examples of “easy” problems are (i) sorting a sequence of, say, 1,000,000 numbers,
+(ii) searching for a name in a telephone directory, and (iii) computing the
+fastest way to drive from Ottawa to Miami. On the other hand, a problem is
+called “hard”, if it cannot be solved efficiently, or if we don’t know whether
+it can be solved efficiently. Examples of “hard” problems are (i) time table
+scheduling for all courses at Carleton, (ii) factoring a 300-digit integer into
+its prime factors, and (iii) computing a layout for chips in VLSI.
+Central Question in Complexity Theory: Classify problems according to their degree of “difficulty”. Give a rigorous proof that
+problems that seem to be “hard” are really “hard”.<br/><br/>
+<strong>1.1.2 Computability Theory</strong><br/>
+In the 1930’s, G¨odel, Turing, and Church discovered that some of the fundamental mathematical problems cannot be solved by a “computer”. (This
+may sound strange, because computers were invented only in the 1940’s).
+An example of such a problem is “Is an arbitrary mathematical statement
+true or false?” To attack such a problem, we need formal definitions of the
+notions of<br/>
+• computer,<br/>
+• algorithm, and<br/>
+• computation.<br/><br/>
+The theoretical models that were proposed in order to understand solvable
+and unsolvable problems led to the development of real computers.
+Central Question in Computability Theory: Classify problems
+as being solvable or unsolvable.<br/><br/>
+
+<strong>1.1.3 Automata Theory</strong><br/>
+Automata Theory deals with definitions and properties of different types of
+“computation models”. Examples of such models are:<br/>
+• Finite Automata. These are used in text processing, compilers, and
+hardware design.<br/>
+• Context-Free Grammars. These are used to define programming languages and in Artificial Intelligence.<br/>
+• Turing Machines. These form a simple abstract model of a “real”
+computer, such as your PC at home.<br/>
+Central Question in Automata Theory: Do these models have
+the same power, or can one model solve more problems than the
+other?<br/><br/>
+<strong>1.1.4 This course</strong><br/>
+In this course, we will study the last two areas in reverse order: We will start
+with Automata Theory, followed by Computability Theory. The first area,
+Complexity Theory, will be covered in COMP 3804.<br/>
+Actually, before we start, we will review some mathematical proof techniques. As you may guess, this is a fairly theoretical course, with lots of
+definitions, theorems, and proofs. You may guess this course is fun stuff for
+math lovers, but boring and irrelevant for others. You guessed it wrong, and
+here are the reasons:<br/>
+1. This course is about the fundamental capabilities and limitations of
+computers. These topics form the core of computer science.<br/>
+2. It is about mathematical properties of computer hardware and software.<br/>
+3. This theory is very much relevant to practice, for example, in the design
+of new programming languages, compilers, string searching, pattern
+matching, computer security, artificial intelligence, etc., etc.<br/>
+4. This course helps you to learn problem solving skills. Theory teaches
+you how to think, prove, argue, solve problems, express, and abstract.<br/>
+5. This theory simplifies the complex computers to an abstract and simple
+mathematical model, and helps you to understand them better.<br/>
+6. This course is about rigorously analyzing capabilities and limitations
+of systems.<br/><br/>
+Where does this course fit in the Computer Science Curriculum at Carleton University? It is a theory course that is the third part in the series
+COMP 1805, COMP 2804, COMP 3803, COMP 3804, and COMP 4804.
+This course also widens your understanding of computers and will influence
+other courses including Compilers, Programming Languages, and Artificial
+Intelligence.
+<br />
+<br/>
+<h5  style="font-weight:bold; color:darkorange;" align="center">Download the pdf file  to get all the unit wise notes.<br/>Try to save your valueable time!<br/></h5>
+
+<br/><br/></div>
+</div>
+</main>
+  <footer style="border-top: 3px solid #DC3545;">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We makes launching and managing our own business easy. It is home to experts who provide clear, practical notes and question papers. <a href="../about-bsc.html" class="text-white">Read More</a></p>
+          <p class="pt-4 text-muted">Copyright ©2018-Present All rights reserved | This template is made by
+            <a href="../personal/sujan.html" target="_blank" style="color: red;">Sujan Paudel</a>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+           <a href="#" ><i class="fab fa-facebook-f" ></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</body>
+
+</html>

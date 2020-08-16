@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Computer Architecture | BSc. CSIT Notes</title>
+
+  <link rel="Shortcut icon" type="image/png" href="https://dslv9ilpbe7p1.cloudfront.net/W3_nDU_sLjE0rj2ermPGFA_store_logo_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../Style.css" />
+  <link rel="stylesheet" href="../mobile-style.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="https://sujanpdl.com.np">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>SUJANPDL.com.np</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto" id="home"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../bsc.html">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          
+            <a href="https://drive.google.com/file/d/17nrLhLTI-VMRGgP8ppyO0KmjSwec-tGZ/view?usp=sharing" ><button class="btn btn-light px-5 py-2 primary-btn" style="margin-top: 10px; ">
+            <i class="fa fa-download"></i>Download !pdf
+          </button></a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+<div class="cp cp--expand-sm " style="margin-left: 20px; margin-right: 20px;">
+  <h1 class="text-center" style=" margin-top: 50px; font-weight: bold; " id="unit-1"> Computer Architecture </h1>
+  <br/><br/><br/>
+                <h3>Data Representation</h3>
+
+<strong>Number System</strong><br/>
+Number of digits used in a number system is called its base or radix. We can categorize
+number system as below:<br/>
+- Binary number system<br/>
+- Octal Number System<br/>
+- Decimal Number System<br/>
+- Hexadecimal Number system<br/><br/>
+
+<strong>Representation of Decimal numbers</strong><br/>
+We can normally represent decimal numbers in one of following two ways<br/>
+- By converting into binary<br/>
+- By using BCD codes<br/><br/>
+<strong>By converting into binary</strong><br/><br/>
+Advantage<br/>
+Arithmetic and logical calculation becomes easy. Negative numbers can be represented
+easily.<br/>
+Disadvantage<br/>
+At the time of input conversion from decimal to binary is needed and at the time of
+output conversion from binary to decimal is needed.<br/>
+Therefore this approach is useful in the systems where there is much calculation than
+input/output.<br/><br/>
+<strong>By using BCD codes</strong><br/><br/>
+Disadvantage<br/>
+Arithmetic and logical calculation becomes difficult to do. Representation of negative
+numbers is tricky.<br/>
+Advantage<br/>
+At the time of input conversion from decimal to binary and at the time of output
+conversion from binary to decimal is not needed.<br/>
+Therefore this approach is useful in the systems where there is much input/output than
+arithmetic and logical calculation.<br/><br/>
+<strong>Complements</strong><br/><br/>
+(R-1)'s Complement<br/>
+(R-1)'s complement of a number N is defined as (rn
+-1) –N<br/>
+Where N is the given number<br/>
+r is the base of number system<br/>
+n is the number of digits in the given numberv
+To get the (R-1)'s complement fast, subtract each digit of a number from (R-1)<br/><br/>
+<strong>Example</strong><br/>
+- 9's complement of 83510 is 16410<br/>
+- 1's complement of 10102 is 01012(bit by bit complement operation)<br/>
+R's Complement<br/>
+R's complement of a number N is defined as rn–N<br/>
+Where N is the given number<br/>
+r is the base of number system<br/>
+n is the number of digits in the given number<br/>
+To get the R's complement fast, add 1 to the low-order digit of its (R-1)'s complement<br/>
+- 10's complement of 83510 is 16410 + 1 = 16510<br/>
+- 2's complement of 10102 is 01012 + 1 = 01102<br/><br/>
+<strong>Representation of Negative numbers</strong><br/><br/>
+There is only one way of representing positive numbers in computer but we can represent
+negative numbers in any one of following three ways:<br/>
+- Signed magnitude representation<br/>
+- Signed 1’s complement representation<br/>
+- Signed 2’s complement representation<br/>
+Signed magnitude representation<br/>
+Complement only the sign bit<br/>
+e.g.<br/>
++9 ==> 0 001001<br/>
+-9 ==> 1 001001<br/>
+Signed 1’s complement representation<br/>
+Complement all the bits including sign bit<br/>
+e.g.<br/>
++9 ==> 0 001001<br/>
+-9 ==> 1 110110<br/>
+Signed 2’s complement representation<br/>
+Take the 2's complement of the number, including its sign bit.<br/>
+e.g.<br/>
++9 ==> 0 001001<br/>
+-9 ==> 1 110111<br/>
+<br />
+<br/>
+<h5  style="font-weight:bold; color:darkorange;" align="center">Download the pdf file  to get all the unit wise notes.<br/>Try to save your valueable time!<br/></h5>
+
+<br/><br/></div>
+</div>
+</main>
+  <footer style="border-top: 3px solid #DC3545;">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We makes launching and managing our own business easy. It is home to experts who provide clear, practical notes and question papers. <a href="../about-bsc.html" class="text-white">Read More</a></p>
+          <p class="pt-4 text-muted">Copyright ©2018-Present All rights reserved | This template is made by
+            <a href="../personal/sujan.html" target="_blank" style="color: red;">Sujan Paudel</a>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+           <a href="#" ><i class="fab fa-facebook-f" ></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</body>
+
+</html>

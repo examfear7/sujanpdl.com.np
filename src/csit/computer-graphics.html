@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Computer Graphics | BSc. CSIT Notes</title>
+
+  <link rel="Shortcut icon" type="image/png" href="https://dslv9ilpbe7p1.cloudfront.net/W3_nDU_sLjE0rj2ermPGFA_store_logo_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../Style.css" />
+  <link rel="stylesheet" href="../mobile-style.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="https://sujanpdl.com.np">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>SUJANPDL.com.np</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto" id="home"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../bsc.html">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          
+            <a href="https://drive.google.com/file/d/1lFFuEXdPALyhy6yw2pPvhgMfHpcMRhW4/view?usp=sharing" ><button class="btn btn-light px-5 py-2 primary-btn" style="margin-top: 10px; ">
+            <i class="fa fa-download"></i>Download !pdf
+          </button></a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+<div class="cp cp--expand-sm " style="margin-left: 20px; margin-right: 20px;">
+  <h1 class="text-center" style=" margin-top: 50px; font-weight: bold; " id="unit-1"> Computer Graphics </h1>
+  <br/><br/><br/>
+                
+<strong>Computer Graphics:</strong><br/> Computer graphics is concerned with producing images and animations (or sequences of images) using a computer. This includes the hardware and software systems used to make these images. The
+task of producing photo-realistic images is an extremely complex one, but this is a field that is in great demand
+because of the nearly limitless variety of applications. The field of computer graphics has grown enormously
+over the past 10–20 years, and many software systems have been developed for generating computer graphics
+of various sorts. This can include systems for producing 3-dimensional models of the scene to be drawn, the
+rendering software for drawing the images, and the associated user-interface software and hardware.<br/><br/>
+Our focus in this course will not be on how to use these systems to produce these images (you can take courses
+in the art department for this), but rather in understanding how these systems are constructed, and the underlying
+mathematics, physics, algorithms, and data structures needed in the construction of these systems.
+The field of computer graphics dates back to the early 1960’s with Ivan Sutherland, one of the pioneers of
+the field. This began with the development of the (by current standards) very simple software for performing
+the necessary mathematical transformations to produce simple line-drawings of 2- and 3-dimensional scenes.
+As time went on, and the capacity and speed of computer technology improved, successively greater degrees
+of realism were achievable. Today it is possible to produce images that are practically indistinguishable from
+photographic images (or at least that create a pretty convincing illusion of reality).<br/><br/>
+<strong>Course Overview:</strong><br/> Given the state of current technology, it would be possible to design an entire university major
+to cover everything (important) that is known about computer graphics. In this introductory course, we will
+attempt to cover only the merest fundamentals upon which the field is based. Nonetheless, with these fundamentals, you will have a remarkably good insight into how many of the modern video games and “Hollywood”
+movie animations are produced. This is true since even very sophisticated graphics stem from the same basic
+elements that simple graphics do. They just involve much more complex light and physical modeling, and more
+sophisticated rendering techniques.<br/><br/>
+In this course we will deal primarily with the task of producing a single image from a 2- or 3-dimensional scene
+model. This is really a very limited aspect of computer graphics. For example, it ignores the role of computer
+graphics in tasks such as visualizing things that cannot be described as such scenes. This includes rendering
+of technical drawings including engineering charts and architectural blueprints, and also scientific visualization
+such as mathematical functions, ocean temperatures, wind velocities, and so on. We will also ignore many of
+the issues in producing animations. We will produce simple animations (by producing lots of single images),
+but issues that are particular to animation, such as motion blur, morphing and blending, temporal anti-aliasing,
+will not be covered. They are the topic of a more advanced course in graphics.<br/><br/>
+Let us begin by considering the process of drawing (or rendering) a single image of a 3-dimensional scene. This
+is crudely illustrated in the figure below. The process begins by producing a mathematical model of the object to
+be rendered. Such a model should describe not only the shape of the object but its color, its surface finish (shiny,
+matte, transparent, fuzzy, scaly, rocky). Producing realistic models is extremely complex, but luckily it is not our
+main concern. We will leave this to the artists and modelers. The scene model should also include information
+about the location and characteristics of the light sources (their color, brightness), and the atmospheric nature of
+the medium through which the light travels (is it foggy or clear). In addition we will need to know the location
+of the viewer. We can think of the viewer as holding a “synthetic camera”, through which the image is to be
+photographed. We need to know the characteristics of this camera (its focal length, for example).
+Based on all of this information, we need to perform a number of steps to produce our desired image.
+Projection: Project the scene from 3-dimensional space onto the 2-dimensional image plane in our synthetic
+
+<br/><br/>
+<strong>Color and shading:</strong><br/> For each point in our image we need to determine its color, which is a function of the
+object’s surface color, its texture, the relative positions of light sources, and (in more complex illumination
+models) the indirect reflection of light off of other surfaces in the scene.<br/><br/>
+<strong>Hidden surface removal: </strong><br/>Elements that are closer to the camera obscure more distant ones. We need to determine which surfaces are visible and which are not.<br/><br/>
+<strong>Rasterization:</strong><br/> Once we know what colors to draw for each point in the image, the final step is that of mapping
+these colors onto our display device.<br/>
+By the end of the semester, you should have a basic understanding of how each of the steps is performed. Of
+course, a detailed understanding of most of the elements that are important to computer graphics will beyond
+the scope of this one-semester course. But by combining what you have learned here with other resources (from
+books or the Web) you will know enough to, say, write a simple video game, write a program to generate highly
+realistic images, or produce a simple animation.<br/><br/>
+<strong>The Course in a Nutshell:</strong><br/> The process that we have just described involves a number of steps, from modeling to
+rasterization. The topics that we cover this semester will consider many of these issues.<br/><br/>
+<strong>Basics:</strong><br/><br/>
+<strong>Graphics Programming:</strong> OpenGL, graphics primitives, color, viewing, event-driven I/O, GL toolkit,
+frame buffers.<br/><br/>
+<strong>Geometric Programming:</strong> Review of linear algebra, affine geometry, (points, vectors, affine transformations), homogeneous coordinates, change of coordinate systems.<br/><br/>
+<strong>Implementation Issues:</strong> Rasterization, clipping.<br/><br/>
+<strong>Modeling:</strong><br/><br/>
+<strong>Model types:</strong> Polyhedral models, hierarchical models, fractals and fractal dimension.
+<strong>Curves and Surfaces: </strong>Representations of curves and surfaces, interpolation, Bezier, B-spline curves and
+surfaces, NURBS, subdivision surfaces.<br/><br/>
+<strong>Surface finish:</strong> Texture-, bump-, and reflection-mapping.<br/><br/>
+<strong>Projection:</strong><br/>
+<strong>3-d transformations and perspective:</strong> Scaling, rotation, translation, orthogonal and perspective transformations, 3-d clipping.<br/><br/>
+<strong>Hidden surface removal:</strong> Back-face culling, z-buffer method, depth-sort.<br/><br/>
+<strong>Issues in Realism:</strong><br/><br/>
+<strong>Light and shading: </strong>Diffuse and specular reflection, the Phong and Gouraud shading models, light transport and radiosity
+<br />
+<br/>
+<h5  style="font-weight:bold; color:darkorange;" align="center">Download the pdf file  to get all the unit wise notes.<br/>Try to save your valueable time!<br/></h5>
+<br/><br/></div>
+</div>
+</main>
+  <footer style="border-top: 3px solid #DC3545;">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We makes launching and managing our own business easy. It is home to experts who provide clear, practical notes and question papers. <a href="../about-bsc.html" class="text-white">Read More</a></p>
+          <p class="pt-4 text-muted">Copyright ©2018-Present All rights reserved | This template is made by
+            <a href="../personal/sujan.html" target="_blank" style="color: red;">Sujan Paudel</a>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+           <a href="#" ><i class="fab fa-facebook-f" ></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</body>
+
+</html>

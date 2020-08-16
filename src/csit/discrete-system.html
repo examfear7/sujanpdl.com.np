@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Discrete System | BSc. CSIT Notes</title>
+
+  <link rel="Shortcut icon" type="image/png" href="https://dslv9ilpbe7p1.cloudfront.net/W3_nDU_sLjE0rj2ermPGFA_store_logo_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../Style.css" />
+  <link rel="stylesheet" href="../mobile-style.css">
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="https://sujanpdl.com.np">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>SUJANPDL.com.np</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto" id="home"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../bsc.html">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          
+            <a href="https://drive.google.com/file/d/1tTt9xyHF6S_dHfNBkPnoWDea2bO7OETX/view?usp=sharing" ><button class="btn btn-light px-5 py-2 primary-btn" style="margin-top: 10px; ">
+            <i class="fa fa-download"></i>Download !pdf
+          </button></a>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+<div class="cp cp--expand-sm " style="margin-left: 20px; margin-right: 20px;">
+  <h1 class="text-center" style=" margin-top: 50px; font-weight: bold; " id="unit-1"> Discrete Structure</h1>
+  <br/><br/><br/>
+                <h3>  Introduction</h3>
+
+Discrete Mathematics deals with discrete objects. Discrete objects are those objects that
+can be counted and are not connected for e.g. houses, trees, desks, integers, etc. So
+dealing with these discrete objects requires different concepts like counting techniques,
+knowledge of different discrete structures that are needed to understand what exactly
+discrete structure is like sets, relations, graphs, etc. we start our quest with foundation and
+go in depth later.<br/><br/>
+<strong>Logic</strong><br/>
+Logic is a language for reasoning. Since logic can helps us to reason the mathematical
+models it needs some rules associated with logic so that we can apply those rules for
+mathematical reasoning. There are lots of applications of logic in the field of computer
+science for e.g. designing circuits, programming, program verifications, etc.<br/><br/>
+<strong>Propositions and Propositional Calculus</strong><br/>
+Proposition is a fundamental concept in logic. Proposition is a declarative sentence that is
+either true or false, but not both. See the examples below:<br/>
+2 + 2 = 5. (False), 7 - 1 = 6. (True)<br/>
+It is hot today. (If it is hot then true)<br/>
+Kathmandu is the capital of Nepal. (True)<br/>
+All the above examples are either true or false.<br/>
+Try to analyze the sentences below:<br/><br/>
+x > 5, Come here, Who are you?, 3 + 4<br/>
+The above sentences are not propositions since we cannot say whether they are true or
+false.<br/><br/>
+Propositions are denoted conventionally by using small letters like p, q, r, s …. The truth
+value of proposition is denoted by T for true proposition and F for false proposition.<br/>
+Reminder: p, q ,r ,s … are not actual propositions but they are propositional variables
+i.e. place holders for propositions.<br/>
+The logic that deals with propositions is called propositional logic or propositional
+calculus<br/><br/>
+<strong>Logical Operators/Connectives</strong><br/>
+Logical operators are used to construct mathematical statements having one or more
+propositions by combining the propositions. The combined proposition is called
+compound Proposition. The truth table is used to get the relationship between truth values
+of propositions. Here we present the logical operators along with their behavior in truth
+table:<br/><br/>
+Negation (not)<br/>
+Given a proposition p, negation operator (¬) is used to get negation of p denoted by ¬p
+called “not p”.<br/>
+Example: Negation of the proposition “ I love birds” is “ I do not love birds” if the
+sentence I love birds is denoted by p then its negation is denoted by ¬p.<br/>
+Truth table<br/>
+p ¬p<br/>
+T F<br/>
+F T<br/>
+Conjunction (and)<br/>
+Given two propositions p and q, the proposition “p and q” denoted by p∧q is the
+proposition that is true whenever both the propositions p and q are true, false otherwise.
+The proposition that is obtained by the use of “and” operator is also called conjunction of
+p and q.<br/><br/>
+Example: If we have propositions p = “Ram is intelligent” and q = “Ram is diligent” the
+conjunction of p and q is Ram is intelligent and diligent. This proposition is true only
+when Ram is intelligent and he is diligent also, false otherwise.<Br/>
+Truth Table<br/>
+p q p∧q<br/>
+T T T<br/>
+T F F<br/>
+F T F<br/>
+F F F<br/>
+<br/><br/>
+<strong>Disjunction (or)</strong><br/><br/>
+Given two propositions p and q, the proposition “p or q” denoted by p∨q is the
+proposition that is false whenever both the propositions p and q are false, true otherwise.
+The proposition that is obtained by the use of “or” operator is also called disjunction of p
+and q.<br/>
+Example: If we have propositions p = “Ram is intelligent” and q = “Ram is diligent” the
+disjunction of p and q is Ram is intelligent or he is diligent. This proposition is false only
+when Ram is not intelligent and not diligent, true otherwise.<br/>
+Truth Table<br/>
+p q p∨q<br/>
+T T T<br/>
+T F T<br/>
+F T T<br/>
+F F F<br/><br/><br/>
+<strong>Exclusive or (Xor)</strong><br/><br/>
+Given two propositions p and q, the proposition exclusive or of p and q denoted by p ⊕ q
+is the proposition that is true whenever only one of the propositions p and q is true, false
+otherwise. As opposed to the disjunction above which is inclusive the general meaning of
+the English sentence can be used to know whether the “or” used is inclusive or exclusive.
+Example: If we have propositions p = “Ram drinks coffee in the morning” and q = “Ram
+drinks tea in the morning” the exclusive or of p and q is Ram drinks coffee or tea in the
+morning.<br/>
+Truth Table<br/>
+p q p ⊕ q<br/>
+T T F<br/>
+T F T<br/>
+F T T<br/>
+F F F<br/>
+<br />
+<br/>
+<h5  style="font-weight:bold; color:darkorange;" align="center">Download the pdf file  to get all the unit wise notes.<br/>Try to save your valueable time!<br/></h5>
+
+<br/><br/></div>
+</div>
+</main>
+  <footer style="border-top: 3px solid #DC3545;">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We makes launching and managing our own business easy. It is home to experts who provide clear, practical notes and question papers. <a href="../about-bsc.html" class="text-white">Read More</a></p>
+          <p class="pt-4 text-muted">Copyright ©2018-Present All rights reserved | This template is made by
+            <a href="../personal/sujan.html" target="_blank" style="color: red;">Sujan Paudel</a>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+           <a href="#" ><i class="fab fa-facebook-f" ></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="padding-left: 8px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../main.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</body>
+
+</html>
